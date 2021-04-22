@@ -1,0 +1,26 @@
+package sgg.obtenerminimo;
+
+import javax.swing.JOptionPane;
+
+/**
+ * Este programa obtiene el número menor de varios números
+ * @author sandra garcia gata
+ */
+public class Main {
+    
+    public static void main(String [] args) {
+    
+        //Declaro variables:
+        int numeroUno, numeroDos;
+        String texto = "El número más pequeño de los dos es: ";
+        
+        //Le pido al usuario los números por pantalla
+        numeroUno = Integer.parseInt(JOptionPane.showInputDialog(null,
+                                    "Introduce un número entero"));
+        numeroDos = Integer.parseInt(JOptionPane.showInputDialog(null,
+        "Introduce otro número entero y te diré cuál es menor de los dos :"));
+
+        System.out.println(texto + Math.min(numeroUno, numeroDos));
+    
+    }
+}
