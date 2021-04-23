@@ -1,0 +1,34 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package sgg.comparardosdecimales;
+
+/**
+ * Comparamos el resultado de dos operaciones en teoría de igual resultado
+ * @author sandra garcia gata
+ */
+public class CompararDosDecimales {
+
+    public static void main(String[] args) {
+        // Declaro las variables como la misma operación expresada en 2 formas 
+        double a = .6 + .6 + .6 + .6 + .6 + .6;
+        double b = .6 * 6;
+        String resultadoA = "La suma de 6 veces 0.6 es ";
+        String resultadoB = "El resultado de multiplicar 0.6 x 6 es ";
+        String noIguales = " A y B no son iguales";
+        String cercanos = "A y B son casi iguales";
+        // Imprimo los resultados
+        System.out.println(resultadoA + a);
+        System.out.println(resultadoB + b);
+        // Hago las comparaciones
+        if (a != b) {
+            System.out.println(noIguales);
+        }
+        // Compruebo si son cercanos. Al restarlos tiene que haber menos de 0.001 de diferencia
+        if (Math.abs(a - b) < .001) {
+            System.out.println(cercanos);
+        }
+    }
+}
