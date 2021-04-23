@@ -1,0 +1,51 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package sgg.controltemperaturaswitch;
+
+import javax.swing.JOptionPane;
+
+/**
+ * Este programa evalúa con un switch la temperatura y acorde, baja o sube la
+ * temperatura. Sale del bucle cuando el usuario confirma que está perfecta. 
+ *
+ * @author sandra garcía gata
+ */
+public class ControlTemperaturaSwitch {
+
+    public static void main(String[] args) {
+
+        //Declaro variables
+        String sopaFria = "La sopa está fría, la calentamos 2ºC más";
+        String sopaCaliente = "La sopa está demasiado caliente, la enfriamos 2ºC";
+        String sopaPerfecta = "La sopa está perfecta. Que aproveche.";
+        String sopaAhora = "La sopa está a ";
+        String comoSopa = "¿Cómo está la sopa? A si fría, B si caliente, C si normal ";
+        String respuesta;
+        int tempSopa = 20;
+
+        // Pregunto al usuario
+        do {
+            System.out.println(sopaAhora + tempSopa);
+            respuesta = JOptionPane.showInputDialog(null, sopaAhora + tempSopa + comoSopa);
+
+            // Evalúo su respuesta
+            switch (respuesta) {
+                case "A":
+                    System.out.println(sopaFria);
+                    tempSopa = tempSopa + 2;
+                    break;
+                case "B":
+                    System.out.println(sopaCaliente);
+                    tempSopa = tempSopa - 2;
+                    break;
+                case "C":
+                    System.out.println(sopaPerfecta);
+                    break;
+                default:
+                    System.out.println("Esa no es una opción");
+                    break;
+            }
+        } while (!"C".equals(respuesta));
