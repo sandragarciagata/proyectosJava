@@ -1,0 +1,33 @@
+package sgg.operadorternario;
+
+import javax.swing.JOptionPane;
+
+/**
+ * Ejemplo de operador ternario, que nos ayuda a comparar la variable con un
+ * valor mínimo o máximo
+ *
+ *
+ * @author sandra garcia gata
+ */
+public class OperadorTernario {
+
+    public static void main(String[] args) {
+        
+        // Declaramos las variables. 
+        
+        double altura; // Variable que le pediremos al usuario por pantalla
+        final double alturaMinima = 120.50; // La constante mínima para comparar
+        String resultado;
+        String puedes = "Puedes subir, tu altura es suficiente";
+        String noPuedes = "No puedes subir, tu altura no es suficiente";
+        
+        // Le pedimos al usuario su altura en cm
+        
+        altura = Double.parseDouble(JOptionPane.showInputDialog(null, 
+                                    "¿Cuál es tu altura en cm?"));
+        
+        // Con esa altura, utilizamos el operador ternario
+        resultado = (altura > alturaMinima) ? puedes: noPuedes; 
+        System.out.println(resultado);
+    }
+}
