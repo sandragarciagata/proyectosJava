@@ -1,0 +1,47 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package sgg.pulsacionescorazon;
+
+import javax.swing.JOptionPane;
+
+/**
+ * Usando operadores lógicos, con varias condiciones, para determinar si las
+ * pulsaciones de una persona son altas o bajas.
+ *
+ * @author sandra garcía gata
+ */
+public class PulsacionesCorazon {
+
+    public static void main(String[] args) {
+        // Declaración de variables a utilizar.
+        int edad;
+        int ppm;
+        // Las pedimos al usuario por pantalla
+        edad = Integer.parseInt(JOptionPane.showInputDialog(null, 
+                            "¿Tu edad es más cercana a 30 o a 60?"));
+        ppm = Integer.parseInt(JOptionPane.showInputDialog(null, 
+                            "¿Cuántas pulsaciones por minuto tienes?"));
+        
+        // Evaluamos sus pulsaciones con la condición de la edad
+        if (edad == 30) {
+            if ((ppm >= 95) && (ppm <= 162)) {
+                System.out.println("Las pulsaciones son normales.");
+            } else if (ppm < 95) {
+                System.out.println("Tu nº de pulsaciones es bajo.");
+            } else {
+                System.out.println("Tus pulsaciones son altas. ");
+            }
+        } else if (edad == 60) {
+            if ((ppm >= 80) && (ppm <= 136)) {
+                System.out.println("Tus pulsaciones son normales. ");
+            } else if (ppm < 80) {
+                System.out.println("Tu nº de pulsaciones es bajo.");
+            } else {
+                System.out.println("Tus pulsaciones son altas. ");
+            }
+        }
+    }
+}
