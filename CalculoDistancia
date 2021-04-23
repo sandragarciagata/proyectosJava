@@ -1,0 +1,34 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package sgg.distanciareparto;
+
+import javax.swing.JOptionPane;
+
+/**
+ * Flujo if para ver si hay reparto. 
+ * @author sandra garcia gata
+ */
+public class DistanciaReparto {
+ 
+    public static void main(String[] args) {
+        double distanciaMaxima = 10; // Distancia máxima en kilómetros para reparto
+        double distanciaCasa; 
+        // Le preguntamos al usuario la distancia de su casa a la tienda
+        
+        distanciaCasa = Double.parseDouble(JOptionPane.showInputDialog(null,
+                        "¿Qué distancia hay de tu casa a la tienda en km?"));
+        
+        if (distanciaCasa > distanciaMaxima) {
+            System.out.println("La distancia de tu casa a la tienda es ");
+            System.out.println(distanciaCasa + ", que es más de " + distanciaMaxima + " km.");
+            System.out.println("No distribuimos a ese área. ");
+        } else {
+            System.out.println("La distancia de tu casa a la tienda es " );
+            System.out.println(distanciaCasa + "km. Te entregaremos tu pedido en 30 minutos.");
+        }
+         
+    }
+}
